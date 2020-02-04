@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style> 
+                        /* CSS */
+ @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+
+    body {
+    padding: 30px 0px 60px;
+}
+.panel > .list-group .list-group-item:first-child {
+    /*border-top: 1px solid rgb(204, 204, 204);*/
+}
+@media (max-width: 767px) {
+    .visible-xs {
+        display: inline-block !important;
+    }
+    .block {
+        display: block !important;
+        width: 100%;
+        height: 1px !important;
+    }
+}
+#back-to-bootsnipp {
+    position: fixed;
+    top: 10px; right: 10px;
+}
+
+
+.c-search > .form-control {
+   border-radius: 0px;
+   border-width: 0px;
+   border-bottom-width: 1px;
+   font-size: 1.3em;
+   padding: 12px 12px;
+   height: 44px;
+   outline: none !important;
+}
+.c-search > .form-control:focus {
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none;
+}
+.c-search > .input-group-btn .btn {
+   border-radius: 0px;
+   border-width: 0px;
+   border-left-width: 1px;
+   border-bottom-width: 1px;
+   height: 44px;
+}
+
+
+.c-list {
+    padding: 0px;
+    min-height: 44px;
+}
+.title {
+    display: inline-block;
+    font-size: 1.7em;
+    font-weight: bold;
+    padding: 5px 15px;
+}
+ul.c-controls {
+    list-style: none;
+    margin: 0px;
+    min-height: 44px;
+}
+
+ul.c-controls li {
+    margin-top: 8px;
+    float: left;
+}
+
+ul.c-controls li a {
+    font-size: 1.7em;
+    padding: 11px 10px 6px;   
+}
+ul.c-controls li a i {
+    min-width: 24px;
+    text-align: center;
+}
+
+ul.c-controls li a:hover {
+    background-color: rgba(51, 51, 51, 0.2);
+}
+
+.c-toggle {
+    font-size: 1.7em;
+}
+
+.name {
+    font-size: 1.7em;
+    font-weight: 700;
+}
+
+.c-info {
+    padding: 5px 10px;
+    font-size: 1.25em;
+} 
+                        /*JavaScript*/
+                        $(function () {
+    /* BOOTSNIPP FULLSCREEN FIX */
+    if (window.location == window.parent.location) {
+        $('#back-to-bootsnipp').removeClass('hide');
+    }
+    
+    
+    $('[data-toggle="tooltip"]').tooltip();
+    
+    $('#fullscreen').on('click', function(event) {
+        event.preventDefault();
+        window.parent.location = "http://bootsnipp.com/iframe/4l0k2";
+    });
+    $('a[href="#cant-do-all-the-work-for-you"]').on('click', function(event) {
+        event.preventDefault();
+        $('#cant-do-all-the-work-for-you').modal('show');
+    })
+    
+    $('[data-command="toggle-search"]').on('click', function(event) {
+        event.preventDefault();
+        $(this).toggleClass('hide-search');
+        
+        if ($(this).hasClass('hide-search')) {        
+            $('.c-search').closest('.row').slideUp(100);
+        }else{   
+            $('.c-search').closest('.row').slideDown(100);
+        }
+    })
+    
+    $('#contact-list').searchable({
+        searchField: '#contact-list-search',
+        selector: 'li',
+        childSelector: '.col-xs-12',
+        show: function( elem ) {
+            elem.slideDown(100);
+        },
+        hide: function( elem ) {
+            elem.slideUp( 100 );
+        }
+    })
+});
+
+</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Delta Force Paratroopers - Discord Community</title>
+    <meta name="description" content="A community of gamers and developers">
+    <link rel="icon" type="image/png" sizes="200x200" href="/assets/img/41448696.png?h=bf2f6e101a954a4e2c8d9c04d16ca8e0">
+    <link rel="icon" type="image/png" sizes="200x200" href="/assets/img/41448696.png?h=bf2f6e101a954a4e2c8d9c04d16ca8e0">
+    <link rel="icon" type="image/png" sizes="200x200" href="/assets/img/41448696.png?h=bf2f6e101a954a4e2c8d9c04d16ca8e0">
+    <link rel="icon" type="image/png" sizes="200x200" href="/assets/img/41448696.png?h=bf2f6e101a954a4e2c8d9c04d16ca8e0">
+    <link rel="icon" type="image/png" sizes="200x200" href="/assets/img/41448696.png?h=bf2f6e101a954a4e2c8d9c04d16ca8e0">
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css?h=95f7dec4e03e69999325f7b89e12e8e0">
+    <link rel="manifest" href="/manifest.json?h=715153f1d02e42d4ba3e4fb8ed3c0b2c">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/fonts/fontawesome5-overrides.min.css?h=03ab36d1dde930b7d44a712f19075641">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aclonica">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa+Slab+One">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+</head>
+
+<body id="page-top">
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top text-danger border-dark shadow" data-aos="zoom-in" data-aos-delay="50" id="mainNav">
+        <div class="container"><a class="navbar-brand border-warning shadow-sm js-scroll-trigger" href="#page-top" style="font-size: 32px;font-family: Merriweather, serif;color: rgb(80,87,255);filter: blur(0px) grayscale(0%) hue-rotate(360deg) sepia(0%);">DF TECHS</a>
+            <button
+                data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-align-justify"></i></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item" role="presentation"><a class="nav-link active border rounded-0 border-success js-scroll-trigger" href="https://dftechsdevcenter.github.io/discordstatus_page" style="color: rgb(173,64,240);">DISCORD SERVER-STATUS PAGE</a></li>
+                        <li class="nav-item"
+                            role="presentation"><a class="nav-link active border rounded-0 border-success js-scroll-trigger" href="https://dftechsdevcenter.github.io/server" style="color: rgb(27,232,35);">DISCORD SERVER</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link active border rounded-0 border-success js-scroll-trigger" href="https://DFTECHSDEVCENTER.github.io" style="color: rgb(218,20,20);">DEVELOPERS SITE</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link active border rounded-0 border-success js-scroll-trigger" href="https://dfpara.github.io/ContactUs">CONTACT PAGE</a></li>
+                    </ul>
+                </div>
+        </div>
+    </nav>
+    
+</br>
+</br>
+
+<div class="container">
+   
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-offset-3 col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading c-list">
+                    <span class="title">Contacts</span>
+                    <ul class="pull-right c-controls">
+                        <li><a href="#cant-do-all-the-work-for-you" data-toggle="tooltip" data-placement="top" title="Add Contact"><i class="glyphicon glyphicon-plus"></i></a></li>
+                        <li><a href="#" class="hide-search" data-command="toggle-search" data-toggle="tooltip" data-placement="top" title="Toggle Search"><i class="fa fa-ellipsis-v"></i></a></li>
+                    </ul>
+                </div>
+                
+                <div class="row" style="display: none;">
+                    <div class="col-xs-12">
+                        <div class="input-group c-search">
+                            <input type="text" class="form-control" id="contact-list-search">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search text-muted"></span></button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <ul class="list-group" id="contact-list">
+                    <li class="list-group-item">
+                        <div class="col-xs-12 col-sm-3">
+                            <img src="/assets/img/members/41448663.jpeg" alt="Bravo68web" class="img-responsive img-circle" />
+                        </div>
+                        <div class="col-xs-12 col-sm-9">
+                            <span class="name">Bravo 68 Web</span><br/>
+                            <span class="fas fa-address-card" data-toggle="tooltip" title="Visit Profile"><a href="Bravo68web/index.html">Visit Profile</a></span>
+                            
+                        </div>
+                        <div class="clearfix"></div>
+                    </li>
+                    
+                   
+                </ul>
+            </div>
+        </div>
+	</div>
+    
+    <div id="cant-do-all-the-work-for-you" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="mySmallModalLabel">Ooops!!!</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Work in Progress !!</p><br/>
+                    <p><strong>Sorry<br/>
+                    ~ @dftechs </strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+       
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+    <script src="/assets/js/script.min.js?h=3f23941bb0cc9465e8e4a684c85b40a7"></script>
+    <script src="//rawgithub.com/stidges/jquery-searchable/master/dist/jquery.searchable-1.0.0.min.js"></script>
+</body>
+
+</html>
