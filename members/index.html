@@ -7,6 +7,9 @@
  @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 
     body {
+        
+    background: -webkit-linear-gradient(left, #fdbe34, #00c6ff);
+
     padding: 30px 0px 60px;
 }
 .panel > .list-group .list-group-item:first-child {
@@ -97,49 +100,14 @@ ul.c-controls li a:hover {
 .c-info {
     padding: 5px 10px;
     font-size: 1.25em;
-} 
-                        /*JavaScript*/
-                        $(function () {
-    /* BOOTSNIPP FULLSCREEN FIX */
-    if (window.location == window.parent.location) {
-        $('#back-to-bootsnipp').removeClass('hide');
-    }
-    
-    
-    $('[data-toggle="tooltip"]').tooltip();
-    
-    $('#fullscreen').on('click', function(event) {
-        event.preventDefault();
-        window.parent.location = "http://bootsnipp.com/iframe/4l0k2";
-    });
-    $('a[href="#cant-do-all-the-work-for-you"]').on('click', function(event) {
-        event.preventDefault();
-        $('#cant-do-all-the-work-for-you').modal('show');
-    })
-    
-    $('[data-command="toggle-search"]').on('click', function(event) {
-        event.preventDefault();
-        $(this).toggleClass('hide-search');
-        
-        if ($(this).hasClass('hide-search')) {        
-            $('.c-search').closest('.row').slideUp(100);
-        }else{   
-            $('.c-search').closest('.row').slideDown(100);
-        }
-    })
-    
-    $('#contact-list').searchable({
-        searchField: '#contact-list-search',
-        selector: 'li',
-        childSelector: '.col-xs-12',
-        show: function( elem ) {
-            elem.slideDown(100);
-        },
-        hide: function( elem ) {
-            elem.slideUp( 100 );
-        }
-    })
-});
+}
+.profile-img{
+    text-align: center;
+}
+.profile-img img{
+    width: 70%;
+    height: 100%;
+}
 
 </style>
     <meta charset="utf-8">
@@ -191,7 +159,7 @@ ul.c-controls li a:hover {
         <div class="col-xs-12 col-sm-offset-3 col-sm-6">
             <div class="panel panel-default">
                 <div class="panel-heading c-list">
-                    <span class="title">Contacts</span>
+                    <span class="title">Our Community Members</span>
                     <ul class="pull-right c-controls">
                         <li><a href="#cant-do-all-the-work-for-you" data-toggle="tooltip" data-placement="top" title="Add Contact"><i class="glyphicon glyphicon-plus"></i></a></li>
                         <li><a href="#" class="hide-search" data-command="toggle-search" data-toggle="tooltip" data-placement="top" title="Toggle Search"><i class="fa fa-ellipsis-v"></i></a></li>
@@ -211,8 +179,10 @@ ul.c-controls li a:hover {
                 
                 <ul class="list-group" id="contact-list">
                     <li class="list-group-item">
-                        <div class="col-xs-12 col-sm-3">
-                            <img src="/assets/img/members/41448663.jpeg" alt="Bravo68web" class="img-responsive img-circle" />
+                        <div class="col-md-4">
+                            <div class="profile-img">
+                                <img src="/assets/img/members/41448663.jpeg" alt=""/>
+                            </div>
                         </div>
                         <div class="col-xs-12 col-sm-9">
                             <span class="name">Bravo 68 Web</span><br/>
